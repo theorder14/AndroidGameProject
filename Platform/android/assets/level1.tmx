@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="700" height="13" tilewidth="16" tileheight="16" nextobjectid="371">
+ <tileset firstgid="1" name="nestle" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="12769" columns="113">
+  <image source="nestle.png" width="2048" height="2048"/>
+ </tileset>
+ <tileset firstgid="12770" name="items_spritesheet" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="1024" columns="32">
+  <image source="items_spritesheet.png" width="576" height="576"/>
+ </tileset>
+ <tileset firstgid="13794" name="spikes" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="9" columns="3">
+  <image source="spikes.png" width="70" height="70"/>
+ </tileset>
+ <tileset firstgid="13803" name="liquidLava" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="9" columns="3">
+  <image source="Tiles/liquidLava.png" width="70" height="70"/>
+ </tileset>
+ <tileset firstgid="13812" name="Chainlinklong" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="34" columns="2">
+  <image source="spikeystuff/Chainlinklong.png" width="42" height="305"/>
+ </tileset>
+ <tileset firstgid="13846" name="stuff" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="759" columns="33">
+  <image source="stuff.png" width="605" height="425"/>
+ </tileset>
+ <tileset firstgid="14605" name="signExit" tilewidth="16" tileheight="16" spacing="1" margin="1" tilecount="16" columns="4">
+  <image source="signExit.png" width="70" height="70"/>
+ </tileset>
+ <tileset firstgid="14621" name="7b8c8394c36bcefd0864babbd27222a5" tilewidth="16" tileheight="16" spacing="1" margin="1" tilecount="391" columns="17">
+  <image source="7b8c8394c36bcefd0864babbd27222a5.jpg" width="289" height="391"/>
+ </tileset>
+ <layer name="Background Color" width="700" height="13">
+  <data encoding="base64" compression="zlib">
+   eJzt1sEJAgEMRFErsAyLsBPrsj9r8bSQq7OEYeV9eCWEyedxu32AS5Kk2esJ17Rde6+BnCTN2j8LpLZr7zXwm3m3kjRr/yyQ2q693UBOkmbtnwVS27X3GshJ0lH7X4EztmvvNZCTpKP2vwJnbNfeayAnSUftfwXO2K6910BOko7a/wqcsV17r4GcJM3aPwuktmvvNZCTpFn7Z4HUdu29BnKSNGv/LJDarr3XQE6SZu2fBVLbtfcayEnS7H3f0f6F+H/bfQGfAH6V
+  </data>
+ </layer>
+ <layer name="Graphic Layer" width="700" height="13">
+  <data encoding="base64" compression="zlib">
+   eJztnDlv1EAYhidsLgrYJJyCLjdHk40SJSlzh6uEhA4JKLhKoKPgKrgkGqDlLrhKoOTmT6QJCUg0/AReS6xkGds79ow9Hs/7Sk+R7Mhz7Ky+JxN7l/uFWCaEWMelbiE6hBCdDtAl3JmvS3Ml+vD2TZPIPosTOXTCMBnEdM0uErrWxeQa6+iX47eDP93JPuu2x6X5mp7rrjEhdoM9YO+Y2bEw8vH7ruelS+BowE/9P4e5a/B1+i1TliSpr8drQpwAJ2t6rhfGD1x7FazV9PqTf+wqrhU157i1yct/VoawfmAVrIGfQ2prpmv8Sa4V1nalJr8vVKM6/iTI7Mk4TDtR3nFtvqayAL/dB/aDA+Agfdea+H13aeJ/GMblyNbWy6jJV8BVcA1cj3DetLV/3bAQFdAMWkAraAPtw+quFTZ2He5Wj87rp14/9FkBzaAFtII20G5gLHFrpmNfqO6JPMcfhY4945r/uTZfUzkFvz0NzoCz4Bx915qE3c/gP68NnvVG/T6sHc95GdsjU1cfohY/Ao/BE/AUPAPPNTpvNxymB/SCPtAPBsCgotvEjV2Ht2R9fen1Q389/+gFfWAADBbAd1PPKaM9YRpde4b+V96YfG9vwG9vglvgNrhD37Umdd+N8tpgZNsxTBkiU1c/oA5/BJ/AZ/AFfAXfwHdN/7+fhMNMgWkwA2bBHJhXdJu4sacdq+z183SoSfQ3BabBDJgFc2AeLFjqvHF7YsFi59W1Z+i75Y3Ke9sk1J5begG/fQlegdeWuW47xrs+MOamCMqYuHnRbRnXk7RW67oOKSbHKnoJ2z+m5xiHvx6aHksjTMYVfzAV/i2TLq4/Zxf8HMbdgxB8bTHmOTbey8CUIbpqrOnaT4gObPJdD6ackfXdXyPJsCVpzmn5nB2/j4xh4mK6XhNSJOi7xY3ngLJnykVuJ9MmbK5FRnfSnNOaeM5uZLRYfcS9FxvGhdgIqqBjXHlYDGNdZOqpSh1WreGmfaIoLtOoXSNPC6tRpueXJ7Jzt2l90jpRVIp+j4I3398jblC2+xmS7Muwc9pDEu5q4jm7wzn4rtfHEcl+4j6znXDcLrAJbC6Q77ZUw2EY3ZFxLhW/UPUTneNLO5esaORW9ci0o+/Kr3WZfNel0HfdSNpz2uBzdm8y9t3zcNAL4GKGzquzjy1w3K1gG9heIN9lmLzSqKbKtInzBlU/Me0UWULfNbPW9N18ovv/4vRdN5LnOa3KPc734KD3wQMJF017T3WSPmSyA567k67LOJq7FRKkkWfouo5snS+77+bxvmXtuyb2qedESZ9Xshn6rhvJ8/vQ0vxNVuctHPQdeD+qdh3dfTRX88UfmTYMYyp/AUxc1HA=
+  </data>
+ </layer>
+ <objectgroup name="Obstacle/Platform">
+  <object id="249" x="2112" y="96" width="320" height="16"/>
+  <object id="259" x="2576" y="192" width="288" height="16"/>
+  <object id="262" x="3136" y="96" width="48" height="112"/>
+  <object id="273" x="3824" y="0" width="16" height="96"/>
+  <object id="274" x="3824" y="144" width="16" height="48"/>
+  <object id="275" x="3840" y="144" width="208" height="16"/>
+  <object id="276" x="4144" y="144" width="80" height="16"/>
+  <object id="277" x="4320" y="96" width="80" height="16"/>
+  <object id="284" x="4784" y="0" width="16" height="64"/>
+  <object id="287" x="2976" y="144" width="64" height="64"/>
+  <object id="291" x="3840" y="0" width="944" height="16"/>
+  <object id="301" x="5728" y="64" width="16" height="144"/>
+  <object id="302" x="5728" y="0" width="16" height="32"/>
+  <object id="304" x="4464" y="176" width="208" height="16"/>
+  <object id="306" x="4960" y="128" width="64" height="16"/>
+  <object id="307" x="5120" y="128" width="64" height="16"/>
+  <object id="308" x="5280" y="128" width="64" height="16"/>
+  <object id="309" x="5440" y="128" width="64" height="16"/>
+  <object id="310" x="5584" y="128" width="64" height="16"/>
+  <object id="316" x="5744" y="128" width="688" height="16"/>
+  <object id="322" x="5968" y="80" width="32" height="16"/>
+  <object id="327" x="4784" y="144" width="16" height="64"/>
+  <object id="328" x="4784" y="128" width="80" height="16"/>
+  <object id="336" x="6560" y="144" width="144" height="16"/>
+  <object id="343" x="6832" y="112" width="96" height="16"/>
+  <object id="344" x="7056" y="80" width="96" height="16"/>
+  <object id="345" x="7168" y="192" width="832" height="16"/>
+  <object id="346" x="5744" y="0" width="2256" height="16"/>
+  <object id="353" x="352" y="160" width="32" height="32"/>
+  <object id="354" x="608" y="160" width="32" height="32"/>
+  <object id="355" x="1520" y="160" width="48" height="48"/>
+  <object id="356" x="1680" y="160" width="48" height="48"/>
+  <object id="358" x="1952" y="144" width="80" height="64"/>
+  <object id="359" x="1824" y="144" width="48" height="64"/>
+  <object id="361" x="8000" y="0" width="16" height="160"/>
+  <object id="366" x="8000" y="192" width="464" height="16"/>
+ </objectgroup>
+ <objectgroup name="ground">
+  <object id="179" x="0" y="192" width="1104" height="16"/>
+  <object id="221" x="1232" y="192" width="160" height="16"/>
+  <object id="272" x="3360" y="192" width="480" height="16"/>
+ </objectgroup>
+ <objectgroup name="flag">
+  <object id="365" x="8176" y="0" width="48" height="192"/>
+ </objectgroup>
+ <objectgroup name="Death">
+  <object id="238" x="1104" y="208" width="128" height="16"/>
+  <object id="239" x="1392" y="208" width="128" height="16"/>
+  <object id="248" x="2000" y="208" width="576" height="16"/>
+  <object id="270" x="3040" y="208" width="96" height="16"/>
+  <object id="271" x="3184" y="208" width="176" height="16"/>
+  <object id="286" x="3840" y="192" width="944" height="16"/>
+  <object id="288" x="2864" y="208" width="112" height="16"/>
+  <object id="303" x="4800" y="144" width="928" height="64"/>
+  <object id="323" x="5888" y="112" width="192" height="16"/>
+  <object id="326" x="6224" y="16" width="80" height="80"/>
+  <object id="333" x="6736" y="128" width="80" height="80"/>
+  <object id="337" x="6416" y="208" width="864" height="16"/>
+  <object id="338" x="6960" y="96" width="80" height="80"/>
+  <object id="349" x="7424" y="144" width="16" height="64"/>
+  <object id="360" x="1568" y="208" width="384" height="16"/>
+  <object id="368" x="7584" y="176" width="112" height="16"/>
+  <object id="369" x="7824" y="144" width="16" height="64"/>
+  <object id="370" x="7168" y="176" width="80" height="16"/>
+ </objectgroup>
+</map>
