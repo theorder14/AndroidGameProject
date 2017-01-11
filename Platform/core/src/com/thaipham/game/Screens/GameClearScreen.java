@@ -34,13 +34,8 @@ public class GameClearScreen implements Screen {
         Table table = new Table();
         table.center();
         table.setFillParent(true);
-
         Label gameOverLabel = new Label("GAME CLEAR", font);
-        Label playAgainLabel = new Label("Click to Play Again", font);
-
         table.add(gameOverLabel).expandX();
-        table.row();
-        table.add(playAgainLabel).expandX().padTop(10f);
 
         stage.addActor(table);
     }
@@ -56,7 +51,7 @@ public class GameClearScreen implements Screen {
     @Override
     public void render(float delta) {
         if(Gdx.input.justTouched()) {
-            game.setScreen(new PlayScreen((PlatGame) game));
+            game.setScreen(new StartMenu(game));
             dispose();
         }
         Gdx.gl.glClearColor(1, 0, 0, 1);

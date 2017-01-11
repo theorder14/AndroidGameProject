@@ -16,11 +16,11 @@ import com.thaipham.game.Sprites.Player1;
 
 
 public abstract class TileObject {
-    protected World world;
-    protected TiledMap map;
-    protected Rectangle rect;
-    protected Body body;
-    protected Fixture fixture;
+    public World world;
+    public TiledMap map;
+    public Rectangle rect;
+    public Body body;
+    public Fixture fixture;
 
     /**
      * Fixtures of TilesObjects

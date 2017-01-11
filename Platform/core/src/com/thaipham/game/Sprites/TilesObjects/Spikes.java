@@ -12,7 +12,7 @@ import com.thaipham.game.Sprites.Player1;
  * The player will have a state of DEAD which will in turn call GameOver method and it will set new screen.
  */
 public class Spikes extends com.thaipham.game.Sprites.TilesObjects.TileObject {
-    public Spikes(PlayScreen screen,Rectangle rect){
+    public Spikes(PlayScreen screen, Rectangle rect){
         super(screen, rect);
         fixture.setUserData(this);
         setCategoryFilter(PlatGame.SPIKES_BIT);
@@ -25,7 +25,7 @@ public class Spikes extends com.thaipham.game.Sprites.TilesObjects.TileObject {
     @Override
     public void onHit(Player1 player1) {
         player1.die();
-        Gdx.app.log("spikes","collision");
+        Gdx.app.log("spikes","collide");
     }
 
 }

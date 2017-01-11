@@ -25,6 +25,7 @@ public class GameOverScreen implements Screen {
     private Game game;
 
     public GameOverScreen(Game game){
+
         this.game = game;
         viewport = new FitViewport(PlatGame.V_WIDTH, PlatGame.V_HEIGHT, new OrthographicCamera());
         stage = new Stage(viewport, ((PlatGame) game).batch);

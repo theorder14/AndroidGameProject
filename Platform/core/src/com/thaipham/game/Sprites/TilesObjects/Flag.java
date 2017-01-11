@@ -25,7 +25,7 @@ public class Flag extends com.thaipham.game.Sprites.TilesObjects.TileObject {
     @Override
     public void onHit(Player1 player1) {
         player1.clear();
-        Gdx.app.log("flag","collision");
+        Gdx.app.log("flag","collide");
 
     }
 

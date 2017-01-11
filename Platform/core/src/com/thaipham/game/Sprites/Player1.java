@@ -41,6 +41,7 @@ public class Player1 extends Sprite {
         // gets our Atlas and find the region by name
         super(screen.getAtlas().findRegion("p1_stand"));
         this.world = screen.getWorld();
+
         currentState = State.STANDING;
         previousState = State.STANDING;
         stateTimer = 0;
@@ -62,6 +63,8 @@ public class Player1 extends Sprite {
         setRegion(playerStand);
 
     }
+
+
 
     /**
      * This method sets the position of the b2body and also make the player move automatically at the x axis
@@ -143,7 +146,7 @@ public class Player1 extends Sprite {
         CircleShape shape = new CircleShape();
         shape.setRadius(8 / PlatGame.PPM);
         fdef.filter.categoryBits = PlatGame.PLAYER_BIT;
-        fdef.filter.maskBits = PlatGame.Ground_BIT |
+        fdef.filter.maskBits = PlatGame.GROUND_BIT |
                 PlatGame.OBJECT_BIT|
                 PlatGame.FLAG_BIT |
                 PlatGame.SPIKES_BIT;

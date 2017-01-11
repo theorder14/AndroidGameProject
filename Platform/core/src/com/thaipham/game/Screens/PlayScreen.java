@@ -3,6 +3,7 @@ package com.thaipham.game.Screens;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -22,7 +23,7 @@ import com.thaipham.game.WorldMap.WorldCreator;
 
 import static com.badlogic.gdx.Gdx.input;
 
-public class PlayScreen implements Screen {
+public class PlayScreen implements Screen  {
     private PlatGame game;
     private TextureAtlas atlas;
 
@@ -55,18 +56,20 @@ public class PlayScreen implements Screen {
 
     /**
      * Create cam,viewport,player and world into our game. We scale pixel per meter to prevent the box2d from falling slow
-     * @param game Brings in our game class.
      *
+     * @param game Brings in our game class.
      */
     public PlayScreen(PlatGame game) {
 
         atlas = new TextureAtlas("player_and_enemies.pack");
         this.game = game;
+        //set up box2d camera
         gamecam = new OrthographicCamera();
         gamePort = new FitViewport(PlatGame.V_WIDTH / PlatGame.PPM, PlatGame.V_HEIGHT / PlatGame.PPM, gamecam);
         //Load our map and setup our map renderer
         mapLoader = new TmxMapLoader();
         map = mapLoader.load("level1.tmx");
+
         renderer = new OrthogonalTiledMapRenderer(map, 1 / PlatGame.PPM);
         gamecam.position.set(gamePort.getWorldWidth() / 2, gamePort.getWorldHeight() / 2, 0);
         // set gravity by 10 in y
@@ -74,17 +77,18 @@ public class PlayScreen implements Screen {
         //allows for debug lines of our box2d world.
         b2dr = new Box2DDebugRenderer();
 
+        //create world objects in game
         creator = new WorldCreator(this);
-
+        //create player in game
         player = new Player1(this);
 
         world.setContactListener(new WorldContactListener());
-
         music = PlatGame.manager.get("audio/music/Epoq-Lepidoptera.ogg", Music.class);
         music.setLooping(true);
         music.play();
 
     }
+
 
     /**
      * Loads our images  from textureAtlas  created by TexturePacker
@@ -93,6 +97,7 @@ public class PlayScreen implements Screen {
     public TextureAtlas getAtlas() {
         return atlas;
     }
+
 
     public void show() {
 
@@ -120,13 +125,16 @@ public class PlayScreen implements Screen {
         MapProperties mapProperties = map.getProperties();
         //grab the map width
         int mapWidth = mapProperties.get("width", Integer.class);
+
         jumping(dt);
         world.step(1 / 60f, 6, 2);
         player.update(dt);
+
         //keep map within boundaries
         if (player.b2body.getPosition().x >= (0.01f + (gamePort.getWorldWidth() / 2)) && player.b2body.getPosition().x <= mapWidth - gamePort.getWorldWidth() / 2) {
             gamecam.position.x = player.b2body.getPosition().x;
         }
+
         //update when camera moves
         gamecam.update();
         //only render what the game can see
@@ -134,7 +142,7 @@ public class PlayScreen implements Screen {
     }
 
     /**
-     * open the box and draws our world into the gam
+     * open the box and draws our world into the game
      */
     @Override
     public void render(float delta) {

@@ -6,6 +6,7 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.thaipham.game.Screens.PlayScreen;
+import com.thaipham.game.Screens.StartMenu;
 
 /**
  * @Author Thai Pham
@@ -18,7 +19,7 @@ public class PlatGame extends Game {
     public static final float PPM = 100;
     public static AssetManager manager;
     //Collision bits
-    public static final short Ground_BIT = 1;
+    public static final short GROUND_BIT = 1;
     public static final short PLAYER_BIT = 2;
     public static final short OBJECT_BIT = 4;
     public static final short SPIKES_BIT = 8;
@@ -33,7 +34,7 @@ public class PlatGame extends Game {
         manager = new AssetManager();
         manager.load("audio/music/Epoq-Lepidoptera.ogg", Music.class);
         manager.finishLoading();
-        setScreen(new PlayScreen(this));
+        setScreen(new StartMenu(this));
     }
 
     @Override
